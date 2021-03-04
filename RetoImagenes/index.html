@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Importamos el JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- .container.section -->
+    <div class="container section">
+        <!-- Creación navbar -->
+        <nav class="pink darken-4">
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">
+                    <img src="img/perfil/1.jpg" class="circle p" width="55" height="auto" alt=""></img>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="sass.html"><i class="material-icons">search</i></a></li>
+                    <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
+                    <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
+                    <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <form id="formid">
+            <!-- sección formulario -->
+            <div class="section">
+                <div class="row">
+                    <!-- solicitud de nombre -->
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">face</i>
+                        <input id="last_name" type="text" class="icon-prefix validate">
+                        <label for="last_name">Nombre</label>
+                    </div>
+                    <!-- lista desplegable -->
+                    <div class="input-field col s6">
+                        <select name="imgSelect" id="imgSelect" class="browser-default packImg">
+                            <option value="" disabled selected>Seleccione una opción</option>
+                            <option value="1">Grupo de imagénes 1</option>
+                            <option value="2">Grupo de imagénes 2</option>
+                            <option value="3">Grupo de imagénes 3</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- Sección de checkbox -->
+            <div class="section">
+                <div class="row">
+                    <div class="col s2">
+                        <label class="checkeable a">
+
+                        </label>
+                    </div>
+                    <div class="col s2">
+                        <label class="checkeable b">
+
+                        </label>
+                    </div>
+                    <div class="col s2">
+                        <label class="checkeable c">
+
+                        </label>
+                    </div>
+                    <div class="col s2">
+                        <label class="checkeable d">
+
+                        </label>
+                    </div>
+                    <div class="col s2">
+                        <label class="checkeable e">
+
+                        </label>
+                    </div>
+                    <div class="col s2">
+                        <label class="checkeable f">
+
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!-- Sección botón -->
+            <div class="section">
+                <div class="row center">
+                    <button class="btn waves-effect waves-light pink darken-4" id="enviar">Aceptar
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </form>
+        <!-- Array Seleccionado -->
+        <div class="row center ">
+            <div class="col s4 offset-s4 mycolor">
+                <h7>Las imagenes seleccionadas son: <output class="f" id="salidaImgSelected"></output></h7>
+            </div>
+        </div>
+        <!-- Sección de algoritmos de ordenamiento -->
+        <div class="section">
+            <!-- lista desplegable -->
+            <div class="row center">
+                <div class="input-field col s6 ">
+                    <select name="algoritmoSeleccionado" id="algoritmoSeleccionado" class="browser-default selectOrd">
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option value="1">Burbuja</option>
+                        <option value="2">Inserción</option>
+                        <option value="3">Selección</option>
+                        <option value="4">MergeSort (Mezcla)</option>
+                        <option value="5">QuickSort (Rápido)</option>
+                        <option value="6">ShellSort</option>
+                    </select>
+                </div>
+                <!-- Radio Button Asc Dsc -->
+                <div class="input-field col s6 selectRadio">
+                    <p>
+                        <label class="mystyle">
+                            <input class="with-gap " type="radio" name="radioButton" id="Asc" checked>
+                            <span>Ascendente</span>
+                        </label>
+                        <label class="mystyle">
+                            <input class="with-gap" type="radio" name="radioButton" id="Dsc" checked>
+                            <span>Descendente</span>
+                        </label>
+                    </p>
+                </div>
+            </div>
+            <!-- Sección botón -->
+            <div class="section">
+                <div class="row center">
+                    <button class="btn waves-effect waves-light pink darken-4" id="ordenar">Aceptar
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+            <!-- Array Ordenado -->
+            <div class="row center ">
+                <div class="col s4 offset-s4 mycolor">
+                    <h7>El orden de las imagenes son: <output class="f" id="salidaImgOrder"></output></h7>
+                </div> 
+            </div> 
+            <!-- Imagenes Ordenadas -->
+            <div class="row center">
+                <div class="flexbox allselect">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/algoritmosOrdenamiento.js"></script>
+    <script src="js/extras.js"></script>
+    <script src="js/tiposDeOrdenamiento.js"></script>
+    <script src="js/validarImagen.js"></script>
+    <!-- Importanción del javascript del Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+<!-- Código JQUERY -->
+<script type="text/javascript">
+    /* El método valida si ya se cargo todo el DOM de una web */
+    $(document).ready(function () {
+        /* Busca el elemento cuyo metadato coincida con el nombre '#enviar' 
+         coincide el elemento button y se le llama el método click()*/
+        $('#enviar').click(function () {
+            let arraySelected = new Array();
+            $('#formid input[type = checkbox]').each(function () {
+                if (this.checked) {
+                    arraySelected.push(parseInt($(this).val()));
+                }
+            });
+            /* Finaliza el método que recorre los elementos del mismo tipo each */
+            if (arraySelected.length != 0){
+                guardarArr(arraySelected);
+            } else{
+                alert('No ha seleccionado imagenes');
+            }   
+            return false;
+        });
+    });
+</script>
+</html>

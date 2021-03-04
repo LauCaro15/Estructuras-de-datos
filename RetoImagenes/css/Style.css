@@ -1,0 +1,21 @@
+/* CheckBox */
+.checkeable input {
+    display: none;
+}
+.checkeable img {
+    width: 400px;
+    border: 5px solid transparent;
+}
+.checkeable input:checked+img {
+    border-color: #880e4f;
+} 
+/* Mostrar la imagenes con un tamaño establecido */
+.flexbox {
+    display: flex;
+    justify-content: center;
+}
+.myM {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 150px;
+} 
